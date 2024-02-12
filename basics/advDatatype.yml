@@ -1,0 +1,73 @@
+#sequence is list
+student: !!seq
+ - name: John Doe
+ - marks: 90
+ - roll: 40
+---
+#like this also
+
+cities: [new delhi, mumbai]
+---
+#some of the keys of the sequnce will
+# be emty is called a spare sequence
+spare seq:
+-
+  - name
+  - class
+  - seq
+  - null
+-
+  - this is nested
+  - inside it
+---
+#nested maping
+name: SNeha
+role:
+ age: 20
+ job: student
+---
+#same as
+name: Sneha
+role: {age: 20, job: student}
+---
+#pairs:key may have multiple values
+#this will be a array of hash tables
+pair: !!pairs
+ -job: teacher
+ -job: student
+---
+#set will allow only unqiue set
+name: !!set
+ ? kunal
+ ? appoor
+ ? rahul
+ 
+---
+#dictonary !!omap
+people: !!omap
+  - sneha:
+     role: teacher
+     age: 20
+     height: fs
+  - sneha:
+     role: teacher
+     age: 20
+     height: fs
+---
+
+#reusing some properties 
+liking: &likes
+  fav fruit: mango
+  dislikes: grapes
+person 1:
+  name: Sneha
+  <<: *likes
+   #fav fruit: mango
+   #dislikes: grapes
+
+person 2:
+  name: Sneha
+   <<: *likes
+   dislikes: berries
+  
+#its repetative so we use anchor  

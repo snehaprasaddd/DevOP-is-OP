@@ -1,0 +1,32 @@
+#string
+myself: sneha
+fuit: "mango"
+job : 'swe'
+
+
+bio: |
+hey my name is sneha
+i am a good student
+
+#write single line in multiple lines
+message: >
+this
+message
+will appear
+in single
+line
+
+#same as
+message: this message will appear in single line
+
+boolean: No #n,false FALSEsame for true
+
+#specific datatype
+zero: !!int 0
+positivenumb: !!int -45
+binarynumb: !!int 00101
+hexadecimal: !!float f23.89ac
+infinite: !!float .inf
+not-a-number: !!float .nan
+
+list: [1,2,3,"apple","banana",true]
